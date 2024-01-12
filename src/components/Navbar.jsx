@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import logo from "../assets/logo.png";
+// import logo from "../assets/logo.webp";
+import logo from "../assets/logo-text.webp";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 import { BsLinkedin, BsFacebook, BsWhatsapp, BsGithub } from "react-icons/bs";
@@ -13,7 +14,7 @@ export default function Navbar() {
         <div className="brand">
           <div className="container-brand">
             <img src={logo} alt="" />
-            <h3 className="logo">Travel on My Trip (Beta)</h3>
+            <h3 className="logo">(Beta)</h3>
           </div>
           <div className="toggle d-none">
             {navbarState ? (

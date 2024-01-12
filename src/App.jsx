@@ -95,11 +95,26 @@ const AppContainer = styled.section`
     flex: 1;
     padding: 10px;
   }
-
+  .d-none {
+    display: none;
+  }
+  .grid {
+    display: grid;  
+  }
+  .grid-center {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    gap:20px;
+    align-items: center;
+  }
   @media (max-width: 767px) {
     .col {
       flex-basis: 100%; /* 1 columns on Smartphone */
     }
+    .grid-center {
+      flex-wrap: wrap;
+    }    
   }
   
   @media (min-width: 768px) {

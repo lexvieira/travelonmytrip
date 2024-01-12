@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { BsLinkedin, BsFacebook, BsWhatsapp, BsGithub } from "react-icons/bs";
 import { AiFillInstagram } from "react-icons/ai";
+import logo from "../assets/logo.webp";
 // import GetImageSrc from "./Util/GetImageSrc";
 export default function Footer() {
   return (
@@ -15,8 +16,11 @@ export default function Footer() {
       <FooterContainer>
         <div className="container">
           <div className="row">
-            <div className="col justify-content-center">
+            <div className="col justify-content-center grid-center" >
               <div>
+                <img src={logo} alt="" />
+              </div>
+              <div className="grid">
                 <h3>
                   Welcome to our site, designed to offer free advice to travelers worldwide.
                 </h3>
@@ -86,9 +90,6 @@ const FooterContainer = styled.footer`
   background-color: #d0d8ff;
   border-radius: 0.5rem;
   padding: 2.5rem;
-  .d-none {
-    display: none;
-  }
   ul {
     display: flex;
     list-style-type: none;
