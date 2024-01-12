@@ -67,6 +67,9 @@ const AppContainer = styled.section`
   .d-flex {
     display: flex;
   }
+  .d-none {
+    display: none!important;
+  }
   .space-evenly {
     justify-content: space-evenly;
   }
@@ -92,6 +95,13 @@ const AppContainer = styled.section`
     flex: 1;
     padding: 10px;
   }
+
+  @media (max-width: 767px) {
+    .col {
+      flex-basis: 100%; /* 1 columns on Smartphone */
+    }
+  }
+  
   @media (min-width: 768px) {
     .col {
       flex-basis: 50%; /* 2 columns on tablet */

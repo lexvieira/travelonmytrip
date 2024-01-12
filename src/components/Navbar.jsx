@@ -15,7 +15,7 @@ export default function Navbar() {
             <img src={logo} alt="" />
             <h3 className="logo">Travel on My Trip (Beta)</h3>
           </div>
-          <div className="toggle">
+          <div className="toggle d-none">
             {navbarState ? (
               <VscChromeClose onClick={() => setNavbarState(false)} />
             ) : (
