@@ -1,6 +1,6 @@
 {
   "short_name": "Travel on My Trip",
-  "name": "Travel on My Trip App",
+  "name": "Travel on My Trip",
   "icons": [
     {
       "src": "favicon.png",
@@ -18,7 +18,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "https://travelonmytrip.ilearnbymyself.com/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
