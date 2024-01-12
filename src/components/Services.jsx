@@ -33,10 +33,10 @@ export default function Services() {
     },
   ];
   return (
-    <Section id="services">
+    <Section id="services" className="d-none">
       {data.map((service, index) => {
         return (
-          <div className="service">
+          <div key={index} className="service">
             <div className="icon">
               <img src={service.icon} alt="" />
             </div>
@@ -54,6 +54,7 @@ const Section = styled.section`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+  display: none!important; 
   .service {
     display: flex;
     flex-direction: column;

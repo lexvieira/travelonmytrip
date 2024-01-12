@@ -3,15 +3,17 @@ import styled from "styled-components";
 import logo from "../assets/logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
+import { BsLinkedin, BsFacebook, BsWhatsapp, BsGithub } from "react-icons/bs";
+import { AiFillInstagram } from "react-icons/ai";
 export default function Navbar() {
   const [navbarState, setNavbarState] = useState(false);
   return (
     <>
       <Nav>
         <div className="brand">
-          <div className="container">
+          <div className="container-brand">
             <img src={logo} alt="" />
-            Travelo
+            <h3 className="logo">Travel on My Trip (Beta)</h3>
           </div>
           <div className="toggle">
             {navbarState ? (
@@ -22,7 +24,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        <ul>
+        <ul style={{display:"none"}}>
           <li>
             <a href="#home">Home</a>
           </li>
@@ -36,7 +38,24 @@ export default function Navbar() {
             <a href="#testimonials">Testimonials</a>
           </li>
         </ul>
-        <button>Connect</button>
+        <ul className="social__links">
+          <li>
+            <a href="https://www.facebook.com/lexoit/"><BsFacebook /></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/lexoit/"><AiFillInstagram /></a>
+          </li>
+          <li>
+            <a href="https://github.com/lexvieira"><BsGithub /></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/lexvieira"><BsLinkedin /></a>
+          </li>
+          <li>
+            <a href="https://api.whatsapp.com/send?phone=13324550267&text=*Contact%20Alex%20#ILearnByMyself:%20(Write%20your%20text%20here)%0a_________________________%0a"><BsWhatsapp /></a>
+          </li>
+        </ul>
+        <button style={{display:"none"}}>Connect</button>
       </Nav>
       <ResponsiveNav state={navbarState}>
         <ul>
@@ -70,8 +89,11 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  .logo {
+    color: #4468e2;
+  }
   .brand {
-    .container {
+    .container-brand {
       cursor: pointer;
       display: flex;
       justify-content: center;
