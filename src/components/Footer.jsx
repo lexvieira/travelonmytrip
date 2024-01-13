@@ -29,7 +29,10 @@ export default function Footer() {
                 </p>
                 <p>
                   "We're not making a penny from this project, but if you need recommendations, we're here for you! We can connect you with incredibly affordable and reliable travel agencies that'll make your trip a breeze. Their prices are super welcoming, and if you love our suggestions, a tip would make our day! 😊"
-                </p>                
+                </p>  
+                <p>
+                  Follow me on Instagram to get more updates<span>&nbsp;<a href="https://www.instagram.com/lexoit">@lexoit Alex <AiFillInstagram /></a></span>
+                </p>                                
               </div>
             </div>
           </div>
