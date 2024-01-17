@@ -89,7 +89,10 @@ const AppContainer = styled.section`
     display: flex;
     flex-wrap: wrap;
     margin: -10px;      
-  }     
+  }
+  .row-margin-top: {
+    margin-top: 20px!important;
+  }       
   .col {
     box-sizing: border-box;
     flex: 1;

@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import homeImage from "../assets/hero.png";
+// import homeImage2 from "../assets/20221012_huayxai_sunset.webp";
 import SearchBar from "./Util/Search";
 import { BsGithub } from "react-icons/bs";
-import ComingSoonMessage from "./Util/ComingSoonMessage";
+// import ComingSoonMessage from "./Util/ComingSoonMessage";
 import TipMessage from "./Util/Tip";
 import avatarImage from "../assets/alex.webp";
 export default function Hero(props) {
@@ -20,7 +21,7 @@ export default function Hero(props) {
               Embarking on a journey beyond Brazil, I've traversed diverse destinations, propelled by an insatiable passion for exploration.
             </p>
             <p></p>
-            <p>Stay connected for forthcoming adventures, as the odyssey continues.</p>
+            <p>Stay tuned for updates; more, including Europe and Brazil, is coming. Thank you for being part of our journey!</p>
             <p></p>
             <h2>Enjoy the journey!</h2>
           </div>
@@ -41,10 +42,20 @@ export default function Hero(props) {
                 Images use Google Maps. For issues, reach out on WhatsApp or Instagram. Your feedback is valuable!
               </p>
               <TipMessage />
-              <ComingSoonMessage />
+              {/* <ComingSoonMessage /> */}
             </div>
-            <div className="col d-flex justify-content-center">
-              <img src={avatarImage} alt="" width="250"/>
+          </div>
+          <div className="row">
+            <div className="col d-flex align-items-center justify-content-center messagePersonal">
+              <img src={avatarImage} className="image" alt="" width="250" />
+              <div className="message">
+                <p>
+                  Transforming from introverted to extroverted, breaking boundaries, learning new languages, and connecting with people from diverse cultures.
+                </p>
+                <p>
+                  Everyone has the potential to learn anything they desire, given the will to do so.
+                </p>
+              </div>              
             </div>
           </div>
         </div>
@@ -59,6 +70,15 @@ const Section = styled.section`
   margin-top: 2rem;
   width: 100%;
   height: 100%;
+  .messagePersonal {
+    padding: 40px!important;
+    img {
+      padding: 30;
+    }
+    .message {
+      padding: 0 150px 0 50px !important;
+    }
+  }
   .welcome-message {
     color: #026e78ff;
     margin: 50px 20%;
@@ -79,7 +99,7 @@ const Section = styled.section`
     display: none!important;
   }
   .background {
-    height: 100%;
+    height: 50%;
     img {
       width: 100%;
       filter: brightness(60%);
@@ -158,14 +178,52 @@ const Section = styled.section`
       }
     }
   }
-  @media screen and (min-width: 280px) and (max-width: 980px) {
-    // height: 20rem;
+  @media screen and (min-width: 280px) and (max-width: 800px) {
+    .messagePersonal {
+      padding: 40px!important;
+      img {
+        padding: 30;
+      }
+      .message {
+        padding: 0 70px 0 50px !important;
+      }
+    }  
+  }
+  @media screen and (min-width: 280px) and (max-width: 579px) {
+    .messagePersonal {
+      display: grid!important;
+      justify-items: center!important;  
+      padding: 30px 0px !important;
+      img {
+        padding: 30;
+      }
+      .message {
+        padding: inherit;
+        padding: 0px !important;
+        margin-top: 30px;
+      }
+    } 
     .background {
-      background-color: palegreen;
+      // background-color: palegreen;
       img {
         height: 100vw;
+        border-radius: 15px;
+        object-fit: cover;
       }
-    }
+    }  
+  }
+  @media screen and (min-width: 580px) and (max-width: 980px) {
+    .background {
+      // background-color: palegreen;
+      img {
+        height: 50vw;
+        border-radius: 15px;
+        object-fit: cover;
+      }
+    }    
+  }  
+  @media screen and (min-width: 280px) and (max-width: 980px) {
+    // height: 20rem;
     .welcome-message {
       margin: 20px 5%;  
       h2 {
