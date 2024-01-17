@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import info1 from "../assets/info1.png";
-import info2 from "../assets/info2.png";
-import info3 from "../assets/info3.png";
+// import info1 from "../assets/info1.png";
+// import info2 from "../assets/info2.png";
+// import info3 from "../assets/info3.png";
 import RecommendedDestinations from "../data/recommendations.json"
 import RenderSelectList from "./Util/SelectListRegion";
 import GetImageSrc from "./Util/GetImageSrc";
