@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { BsLinkedin, BsFacebook, BsWhatsapp, BsGithub } from "react-icons/bs";
 import { AiFillInstagram } from "react-icons/ai";
 import logo from "../assets/logo.webp";
+import TipMessage from "./Util/Tip";
 // import GetImageSrc from "./Util/GetImageSrc";
 export default function Footer() {
   return (
@@ -36,7 +37,12 @@ export default function Footer() {
               </div>
             </div>
           </div>
-        </div>        
+        </div>    
+        <div className="container">
+          <div className="col">
+            <TipMessage />
+          </div>
+        </div>  
         <div className="container">
           <div className="row">
             <div className="col space-evenly1">

@@ -6,6 +6,8 @@ import info3 from "../assets/info3.png";
 import RecommendedDestinations from "../data/recommendations.json"
 import RenderSelectList from "./Util/SelectListRegion";
 import GetImageSrc from "./Util/GetImageSrc";
+import { BsMap } from "react-icons/bs";
+
 
 export default function Recommend(props) {
   const [activeCountry, setActiveCountry] = useState(Number(1));
@@ -123,16 +125,17 @@ export default function Recommend(props) {
 
                   <h3>{place.title}</h3>
                   <p>{place.subtitle}</p>
+                  <p>{place.details}</p>
                   <div className="info">
                     <div className="services">
-                      <img src={info1} alt="" />
+                      {/* <img src={info1} alt="" />
                       <img src={info2} alt="" />
-                      <img src={info3} alt="" />
+                      <img src={info3} alt="" /> */}
                     </div>
                     <h4>{place.cost}</h4>
                   </div>
                   <div className="distance">
-                    <span><a href={place.link} target="_blank" rel="noopener noreferrer" >Click and Go!</a> </span>
+                    <span><a href={place.link} target="_blank" rel="noopener noreferrer" >Click and Go!&nbsp;<BsMap /></a> </span>
                   </div>
                 </div>
                 : null
@@ -299,6 +302,9 @@ const Section = styled.section`
       .distance {
         display: flex;
         justify-content: space-between;
+        a {
+          text-decoration: none;
+        }
       }
       .destination-image-fit{
         object-fit: cover;

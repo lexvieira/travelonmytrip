@@ -3,43 +3,52 @@ import styled from "styled-components";
 import homeImage from "../assets/hero.png";
 import SearchBar from "./Util/Search";
 import { BsGithub } from "react-icons/bs";
+import ComingSoonMessage from "./Util/ComingSoonMessage";
+import TipMessage from "./Util/Tip";
+import avatarImage from "../assets/alex.webp";
 export default function Hero(props) {
   return (
     <>
-    <Section id="hero">
-      <div className="background">
-        <img src={homeImage} alt="" />
-      </div>
-      <div className="content">
-        <div className="title">
-          <h1>Venturing Beyond Borders: Exploring the World</h1>
-          <p>
-            Embarking on a journey beyond Brazil, I've traversed diverse destinations, propelled by an insatiable passion for exploration.
-          </p>
-          <p></p>
-          <p>Stay connected for forthcoming adventures, as the odyssey continues.</p>
-          <p></p>
-          <h2>Enjoy the journey!</h2>
+      <Section id="hero">
+        <div className="background">
+          <img src={homeImage} alt="" />
         </div>
-        <SearchBar className="d-none" />
-      </div>
-    </Section>
-    <Section>
+        <div className="content">
+          <div className="title">
+            <h1>Venturing Beyond Borders: Exploring the World</h1>
+            <p>
+              Embarking on a journey beyond Brazil, I've traversed diverse destinations, propelled by an insatiable passion for exploration.
+            </p>
+            <p></p>
+            <p>Stay connected for forthcoming adventures, as the odyssey continues.</p>
+            <p></p>
+            <h2>Enjoy the journey!</h2>
+          </div>
+          <SearchBar className="d-none" />
+        </div>
+      </Section>
+      <Section>
         <div className="container content1 welcome-message" id="welcome">
-          <h2>
-            Welcome, adventurers! 🌍✨ 
-          </h2>
-          <p>
-            We're thrilled to present our beta version – a platform ready to embark on journeys with you. While we fine-tune, this space is dedicated to helping explorers like you navigate the world cheap, funny and safe. Your feedback will shape our expedition, making every step together more remarkable. Begin your adventure and let's explore the globe!
-          </p>
-          <p>
-            Here's a glimpse of my Southeast Asia adventure! Stay tuned for more details, galleries, and my European escapades coming soon 😃.
-          </p>
-          <p>
-            Project available on <a href="https://github.com/lexvieira/travelonmytrip" target="_blank" rel="noreferrer" >Git Hub <BsGithub /></a> for students.
-          </p>
-        </div>         
-    </Section>    
+          <div className="row">
+            <div className="col">
+              <h2>
+                Welcome, adventurers! 🌍✨
+              </h2>
+              <p>
+                Join us in exploring the world on a budget. Your feedback shapes our journey. Project available on <a href="https://github.com/lexvieira/travelonmytrip" target="_blank" rel="noreferrer">GitHub <BsGithub /></a> for coding enthusiasts.
+              </p>
+              <p>
+                Images use Google Maps. For issues, reach out on WhatsApp or Instagram. Your feedback is valuable!
+              </p>
+              <TipMessage />
+              <ComingSoonMessage />
+            </div>
+            <div className="col d-flex justify-content-center">
+              <img src={avatarImage} alt="" width="250"/>
+            </div>
+          </div>
+        </div>
+      </Section>
     </>
 
   );
@@ -150,11 +159,11 @@ const Section = styled.section`
     }
   }
   @media screen and (min-width: 280px) and (max-width: 980px) {
-    height: 20rem;
+    // height: 20rem;
     .background {
       background-color: palegreen;
       img {
-        height: 100%;
+        height: 100vw;
       }
     }
     .welcome-message {
