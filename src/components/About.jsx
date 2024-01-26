@@ -1,51 +1,31 @@
 import React from "react";
 import styled from "styled-components";
-import homeImage from "../assets/hero.png";
 // import homeImage2 from "../assets/20221012_huayxai_sunset.webp";
 import SearchBar from "./Util/Search";
 import { BsGithub } from "react-icons/bs";
 // import ComingSoonMessage from "./Util/ComingSoonMessage";
 import TipMessage from "./Util/Tip";
 import avatarImage from "../assets/alex.webp";
-import About from "./About";
-export default function Hero(props) {
+export default function About(props) {
   return (
     <>
-      <Section id="hero">
-        <div className="background">
-          <img src={homeImage} alt="" />
-        </div>
-        <div className="content">
-          <div className="title">
-            <h1>Venturing Beyond Borders: Exploring the World</h1>
-            <h2>
-              Welcome, adventurers! 🌍✨
-            </h2>
-            <p>
-              Embarking on a journey beyond Brazil, I've traversed diverse destinations, propelled by an insatiable passion for exploration.
-            </p>
-            <p></p>
-            <p>Stay tuned for updates; more, including Europe and Brazil, is coming. Thank you for being part of our journey!</p>
-            <p></p>
-            <h2>Enjoy the journey!</h2>
-          </div>
-          <SearchBar className="d-none" />
-        </div>
-      </Section>
       <Section>
         <div className="container content1 welcome-message" id="welcome">
           <div className="row">
-            <div className="col">
-              <p>
-                Images use Google Maps. For issues, reach out on WhatsApp or Instagram. Your feedback is valuable!
-              </p>
-              <TipMessage visible={false} />
-              {/* <ComingSoonMessage /> */}
+            <div className="col d-flex align-items-center justify-content-center messagePersonal">
+              <img src={avatarImage} className="image" alt="" width="250" />
+              <div className="message">
+                <p>
+                  Transforming from introverted to extroverted, breaking boundaries, learning new languages, and connecting with people from diverse cultures.
+                </p>
+                <p>
+                  Everyone has the potential to learn anything they desire, given the will to do so.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </Section>
-      {/* <About /> */}
     </>
 
   );

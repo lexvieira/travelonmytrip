@@ -9,10 +9,10 @@ export default function Footer() {
   return (
     <>
       {/* <FooterContainer className="d-none"> */}
-        {/* <div className="container d-none"> */}
-          {/* <img src={GetImageSrc("../assets/avatarImage.jpeg")} className="logo-byb" alt="" /> */}
-          {/* <GetImageSrc src="images/byb-logo.png" className="logo-byb" /> */}
-        {/* </div> */}
+      {/* <div className="container d-none"> */}
+      {/* <img src={GetImageSrc("../assets/avatarImage.jpeg")} className="logo-byb" alt="" /> */}
+      {/* <GetImageSrc src="images/byb-logo.png" className="logo-byb" /> */}
+      {/* </div> */}
       {/* </FooterContainer> */}
       <FooterContainer>
         <div className="container">
@@ -26,27 +26,27 @@ export default function Footer() {
                   Welcome to our site, designed to offer free advice to travelers worldwide.
                 </h3>
                 <p>
-                  We're kicking off with Southeast Asia! Stay tuned for new destinations and our European lineup in the next phase.
+                  Join us in exploring the world on a budget. Your feedback shapes our journey. Project available on <a href="https://github.com/lexvieira/travelonmytrip" target="_blank" rel="noreferrer">GitHub <BsGithub /></a> for coding enthusiasts.
                 </p>
                 <p>
                   "We're not making a penny from this project, but if you need recommendations, we're here for you! We can connect you with incredibly affordable and reliable travel agencies that'll make your trip a breeze. Their prices are super welcoming, and if you love our suggestions, a tip would make our day! 😊"
-                </p>  
+                </p>
                 <p>
                   Follow me on Instagram to get more updates<span>&nbsp;<a href="https://www.instagram.com/lexoit">@lexoit Alex <AiFillInstagram /></a></span>
-                </p>                                
+                </p>
               </div>
             </div>
           </div>
-        </div>    
+        </div>
         <div className="container">
           <div className="col">
             <TipMessage />
           </div>
-        </div>  
+        </div>
         <div className="container">
           <div className="row">
             <div className="col space-evenly1">
-              <span>Copyright &copy; 2023 TravelOnMyTrip. <br />All rights reserved</span>          
+              <span>Copyright &copy; 2023 TravelOnMyTrip. <br />All rights reserved</span>
             </div>
             <div className="col d-none">
               <ul className="links">
@@ -62,7 +62,7 @@ export default function Footer() {
                 <li>
                   <a href="#testimonials">Testimonials</a>
                 </li>
-              </ul>              
+              </ul>
             </div>
             <div className="col">
               <ul className="social__links">
@@ -81,8 +81,8 @@ export default function Footer() {
                 <li>
                   <a href="https://api.whatsapp.com/send?phone=13324550267&text=*Contact%20Alex%20#ILearnByMyself:%20(Write%20your%20text%20here)%0a_________________________%0a"><BsWhatsapp /></a>
                 </li>
-              </ul>   
-            </div>            
+              </ul>
+            </div>
           </div>
         </div>
 
