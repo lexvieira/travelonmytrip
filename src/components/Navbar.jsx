@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 // import logo from "../assets/logo.webp";
 import logo from "../assets/logo-text.webp";
@@ -6,8 +6,18 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 import { BsLinkedin, BsFacebook, BsWhatsapp, BsGithub } from "react-icons/bs";
 import { AiFillInstagram } from "react-icons/ai";
+import { Link, useLocation } from 'react-router-dom';
+
+
 export default function Navbar() {
   const [navbarState, setNavbarState] = useState(false);
+  const [activeMenu, setActiveMenu] = useState("home");
+  const location = useLocation();
+  // Mixing Techiniques using UseState and UseLocation to check the active links
+  useEffect(() => {
+    setActiveMenu(location.pathname.replace("/","") === "" ? "home" : location.pathname.replace("/",""));
+  },[activeMenu, location.pathname])
+
   return (
     <>
       <Nav>
@@ -25,35 +35,35 @@ export default function Navbar() {
           </div>
         </div>
 
-        <ul style={{display:"none"}}>
+        <ul>
           <li>
-            <a href="#home">Home</a>
+            <Link to="/" onClick={() => setActiveMenu("home")} className={activeMenu === "home" ? "active" : ""}>Home</Link>
+          </li> 
+          <li>
+            <Link to="/about" onClick={() => setActiveMenu("about")} className={activeMenu === "about" ? "active" : ""}>About</Link>
           </li>
-          <li>
-            <a href="#services">About</a>
+          <li className="d-none">
+            <Link to="/places" onClick={() => setActiveMenu("places")} className={activeMenu === "places" ? "active" : ""}>Places</Link>
           </li>
-          <li>
-            <a href="#recommend">Places</a>
-          </li>
-          <li>
-            <a href="#testimonials">Testimonials</a>
+          <li className="d-none">
+            <Link to="/services" onClick={() => setActiveMenu("services")} className={activeMenu === "services" ? "active" : ""}>services</Link>
           </li>
         </ul>
         <ul className="social__links">
           <li>
-            <a href="https://www.facebook.com/lexoit/"><BsFacebook /></a>
+            <a href="https://www.facebook.com/lexoit/" target="_blank" rel="noopener noreferrer" ><BsFacebook /></a>
           </li>
           <li>
-            <a href="https://www.instagram.com/lexoit/"><AiFillInstagram /></a>
+            <a href="https://www.instagram.com/lexoit/" target="_blank" rel="noopener noreferrer" ><AiFillInstagram /></a>
           </li>
           <li>
-            <a href="https://github.com/lexvieira"><BsGithub /></a>
+            <a href="https://github.com/lexvieira" target="_blank" rel="noopener noreferrer" ><BsGithub /></a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/lexvieira"><BsLinkedin /></a>
+            <a href="https://www.linkedin.com/in/lexvieira" target="_blank" rel="noopener noreferrer" ><BsLinkedin /></a>
           </li>
           <li>
-            <a href="https://api.whatsapp.com/send?phone=13324550267&text=*Contact%20Alex%20#ILearnByMyself:%20(Write%20your%20text%20here)%0a_________________________%0a"><BsWhatsapp /></a>
+            <a href="https://api.whatsapp.com/send?phone=13324550267&text=*Contact%20Alex%20#ILearnByMyself:%20(Write%20your%20text%20here)%0a_________________________%0a" target="_blank" rel="noopener noreferrer" ><BsWhatsapp /></a>
           </li>
         </ul>
         <button style={{display:"none"}}>Connect</button>
@@ -121,13 +131,17 @@ const Nav = styled.nav`
         &:hover {
           color: #023e8a;
         }
-      }
-      &:first-of-type {
-        a {
+        &.active {
           color: #023e8a;
           font-weight: 900;
         }
       }
+      // &:first-of-type {
+      //   a {
+      //     color: #023e8a;
+      //     font-weight: 900;
+      //   }
+      // }
     }
   }
   button {

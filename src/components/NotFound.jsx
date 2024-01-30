@@ -6,33 +6,16 @@ import styled from "styled-components";
 // import ComingSoonMessage from "./Util/ComingSoonMessage";
 // import TipMessage from "./Util/Tip";
 import avatarImage from "../assets/alex.webp";
-export default function About(props) {
+export default function NotFound(props) {
   return (
     <>
       <Section>
         <div className="container content1 welcome-message" id="welcome">
           <div className="row">
             <div className="col d-flex align-items-center justify-content-center messagePersonal">
-              <div>
-                <img src={avatarImage} className="image" alt="" width="350" />
-                <p>
-                  Photo from Angkor Wat temple, searching for Tomb Raider Spots
-                </p>
-              </div>
-              <div className="message grid">
-                <p>
-                  Transforming from introverted to extroverted, breaking boundaries, learning new languages, and connecting with people from diverse cultures.
-                </p>
-                <p>
-                  Everyone has the potential to learn anything they desire, given the will to do so.
-                </p>
-                <p>
-                  My story in Brazil is not different from that of most people; we work hard with little time to enjoy life. It's challenging, especially when you're super shy and introverted. However, at some point, I decided to turn this story upside-down. I changed my life, landed a job in technology, started engaging with people, and tried to break the boundaries of shyness. You know what? It worked.
-                </p>
-                <p>
-                  The next step was to leave Brazil and explore other places, starting in Europe with a visit to my sister, nephew, and brother-in-law in Ireland. I made stops in Morocco and Portugal, and from there, I didn't stop. Including Brazil, I've been to around 30 countries, counting Ireland and Northern Ireland as two separate countries — quite amusing, isn't it?
-                </p>
-              </div>
+                <h1>
+                  Sorry Buddy, Page not found!                  
+                </h1>
             </div>
           </div>
         </div>

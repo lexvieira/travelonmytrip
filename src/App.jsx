@@ -1,15 +1,24 @@
 import React, { useEffect } from "react";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Recommend from "./components/Recommend";
-import ScrollToTop from "./components/ScrollToTop";
-import Services from "./components/Services";
+// import Footer from "./components/Footer";
+// import Hero from "./components/Hero";
+// import Navbar from "./components/Navbar";
+// import Recommend from "./components/Recommend";
+// import ScrollToTop from "./components/ScrollToTop";
+// import Services from "./components/Services";
 // import Testimonials from "./components/Testimonials";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import About from "./components/About";
+import NotFound from "./components/NotFound";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import AppContainer from "./components/AppContainer";
 import scrollreveal from "scrollreveal";
+// import AppContainer from "./components/AppContainer";
+// import About from "./components/About";
+// import scrollreveal from "scrollreveal";
 import styled from "styled-components";
 
-export default function App() {
+const App = () => {
 
   useEffect(() => {
     const sr = scrollreveal({
@@ -35,20 +44,22 @@ export default function App() {
     );
   }, []);
   return (
-    <AppContainer>
-      <ScrollToTop />
-      <Navbar />
-      <Hero />
-      <Services />
-      <Recommend />
-      {/* <Testimonials /> */}
+    <AppContainerStyled>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<AppContainer />} exact />
+          <Route path="/about" element={<About />} exact />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Router>
       <Footer />
-    </AppContainer>
+    </AppContainerStyled>
+
   );
-}
+};
 
-
-const AppContainer = styled.section`
+const AppContainerStyled = styled.section`
   .logo-byb {
     width: 200px;
   }
@@ -140,3 +151,4 @@ const AppContainer = styled.section`
   
   `
 
+export default App;

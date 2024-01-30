@@ -15,7 +15,7 @@ body {
     sans-serif;
   background-image: url('./assets/bg.png');
   background-repeat: repeat-y;
-  background-size: contain;
+  background-size: cover;
 }
 
 ::-webkit-scrollbar {

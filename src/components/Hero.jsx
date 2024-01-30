@@ -3,11 +3,11 @@ import styled from "styled-components";
 import homeImage from "../assets/hero.png";
 // import homeImage2 from "../assets/20221012_huayxai_sunset.webp";
 import SearchBar from "./Util/Search";
-import { BsGithub } from "react-icons/bs";
+// import { BsGithub } from "react-icons/bs";
 // import ComingSoonMessage from "./Util/ComingSoonMessage";
 import TipMessage from "./Util/Tip";
-import avatarImage from "../assets/alex.webp";
-import About from "./About";
+// import avatarImage from "../assets/alex.webp";
+// import About from "./About";
 export default function Hero(props) {
   return (
     <>
@@ -25,7 +25,7 @@ export default function Hero(props) {
               Embarking on a journey beyond Brazil, I've traversed diverse destinations, propelled by an insatiable passion for exploration.
             </p>
             <p></p>
-            <p>Stay tuned for updates; more, including Europe and Brazil, is coming. Thank you for being part of our journey!</p>
+            <p>Stay tuned for updates; more, including Europe and Brazil, is coming. Thank you for being part of our journey! Feedbacks and Recommendations are welcome on Whatsapp or Instagram</p>
             <p></p>
             <h2>Enjoy the journey!</h2>
           </div>
@@ -33,11 +33,11 @@ export default function Hero(props) {
         </div>
       </Section>
       <Section>
-        <div className="container content1 welcome-message" id="welcome">
+        <div className="container content1 welcome-message d-none" id="welcome">
           <div className="row">
             <div className="col">
               <p>
-                Images use Google Maps. For issues, reach out on WhatsApp or Instagram. Your feedback is valuable!
+                Images use Google Maps at the first version. For issues, reach out on WhatsApp or Instagram. Your feedback is valuable!
               </p>
               <TipMessage visible={false} />
               {/* <ComingSoonMessage /> */}

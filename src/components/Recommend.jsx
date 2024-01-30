@@ -6,7 +6,7 @@ import styled from "styled-components";
 import RecommendedDestinations from "../data/recommendations.json"
 import RenderSelectList from "./Util/SelectListRegion";
 import GetImageSrc from "./Util/GetImageSrc";
-import { BsMap } from "react-icons/bs";
+import { BsMap, BsWhatsapp } from "react-icons/bs";
 
 
 export default function Recommend(props) {
@@ -126,6 +126,7 @@ export default function Recommend(props) {
                   <h3>{place.title}</h3>
                   <p>{place.subtitle}</p>
                   <p>{place.details}</p>
+                  <p><a href={`https://wa.me/${place.contact.replace("+","").replace(" ","")}`} target="_blank" rel="noopener noreferrer" >{place.contact ? <><BsWhatsapp />&nbsp;</> : ""}{place.contact}</a></p>
                   <div className="info">
                     <div className="services">
                       {/* <img src={info1} alt="" />
@@ -309,6 +310,7 @@ const Section = styled.section`
       .destination-image-fit{
         object-fit: cover;
         height: 390px;
+        min-width: 100%;
         border-radius: 12px;
       }
     }
