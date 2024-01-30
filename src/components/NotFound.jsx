@@ -5,7 +5,7 @@ import styled from "styled-components";
 // import { BsGithub } from "react-icons/bs";
 // import ComingSoonMessage from "./Util/ComingSoonMessage";
 // import TipMessage from "./Util/Tip";
-import avatarImage from "../assets/alex.webp";
+// import avatarImage from "../assets/alex.webp";
 export default function NotFound(props) {
   return (
     <>
