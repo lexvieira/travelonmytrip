@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import homeImage from "../assets/hero.png";
+import homeImage from "../assets/hero.webp";
 // import homeImage2 from "../assets/20221012_huayxai_sunset.webp";
 import SearchBar from "./Util/Search";
 // import { BsGithub } from "react-icons/bs";

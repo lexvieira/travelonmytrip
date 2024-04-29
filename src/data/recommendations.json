@@ -14,8 +14,32 @@
           "image": "",
           "data": [
             {
+              "image": "images/places/20240430_bedspacehostel.webp",
+              "title": "Bed Space Hostel @Khaosan",
+              "visible": true,
+              "subtitle": "Located near Khaosan Road, this hostel is the newest and friendliest spot in town. The beds are super comfortable, and they offer convenient transportation services and massage facilities all under one roof.",
+              "linkrecommendation": "",
+              "details": "",
+              "contact": "+660837198394",
+              "address": "",
+              "cost": "",
+              "link": "https://maps.app.goo.gl/RpASjo5hAza8gG9h8",
+              "fulllink": {
+                "id": 0,
+                "status": true,
+                "urlUnshorted": "https://www.google.com/maps/place/Bed+Space+Hostel+@Khaosan/@13.7623594,100.5038715,17z/data=!4m21!1m11!3m10!1s0x30e299003f064d63:0xd554c3819fe826ec!2sBed+Space+Hostel+@Khaosan!5m2!4m1!1i2!8m2!3d13.7624231!4d100.5039181!10e1!16s%2Fg%2F11y3sl_mvt!3m8!1s0x30e299003f064d63:0xd554c3819fe826ec!5m2!4m1!1i2!8m2!3d13.7624231!4d100.5039181!16s%2Fg%2F11y3sl_mvt?entry=ttu",
+                "placeDetails": {
+                  "html_attributions": [],
+                  "result": {
+                  },
+                  "status": "OK"
+                }
+              },
+              "duration": ""
+            },            
+            {
               "image": "https://lh3.googleusercontent.com/places/ANXAkqEQ9G3lXfYKF63nusJtcALaZSvpa6rTmx_2dSxv0nO4wWXHFYRjS233fO9wtvvc1o0SNF8GmQyHuogsnx0afOLc0nSkw_9lWEc=s1600-w500",
-              "title": "Ploy or Mint (are the same hostel) for Backpackers",
+              "title": "Ploy or Mint (are the same hostel) for Backpackers, super nice staff over there, the hostels are a bit old fashion, but quite popular around Samsen 4 Alley",
               "visible": true,
               "subtitle": "",
               "linkrecommendation": "",
